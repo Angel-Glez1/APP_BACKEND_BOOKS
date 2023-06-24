@@ -14,7 +14,7 @@ const app = express();
 
 
 // Middlewares.
-app.use(express.static(path.join(STORAGE_PATH, '/public')));
+app.use(express.static('public'))
 app.use(helmet());
 app.use(cors());
 app.use(logger(':date[web] :method :url :status :res[content-length] - :response-time ms, AUTH :req[Authorization]'));
